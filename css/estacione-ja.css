@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,315;1,315&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
+
+body {
+  background-color: #000000;
+}
+
+nav {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  background-color: #1A1A1A;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul.nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul.nav-menu li {
+  display: inline;
+  margin-right: 40px;
+}
+
+nav ul.nav-menu li a:hover {
+  color: white;
+  border-bottom: 1px solid #FFDF56; 
+  padding-bottom: 5px; /* Ajustando o espaçamento abaixo do texto */
+  margin-bottom: 5px; /* Ajustando o espaçamento abaixo da linha */
+}
+
+nav ul li {
+  color: #FFDF56;
+  list-style: none;
+  padding: 40px;
+  cursor: pointer;
+  font-family:  'Josefin Sans', sans-serif;
+}
+
+nav ul li a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+img {
+  height: 70px;
+}
+
+.menu{
+  cursor: pointer;
+  display: none;
+}
+
+.menu .bar{
+  display: block;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  background: #FFDF56;
+  margin: 4px auto;
+  transition: all 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+  background: #FFDF56;
+}
+
+#map {
+    height: 70vh; /* Define a altura do mapa como 70% da altura da janela */
+    width: 100%;
+    margin-bottom: 20px; /* Espaço entre o mapa e a lista */
+}
+
+
+.search-container {
+    /* position: absolute; */
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    width: 500px!important;   
+}
+
+
+#location-input {
+    width: 300px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left:10px ;
+}
+
+#location-input::placeholder {
+    font-size: 14px;
+    color: #999;
+}
+
+#parking-info {
+    position: fixed;
+    bottom: 80px; /* Ajuste este valor para mover o elemento para cima */
+    left: 20px;
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    color: #333;
+    z-index: 1000; /* Certifique-se de que o z-index seja alto o suficiente para que o elemento fique acima de outros conteúdos */
+}
+
+#parking-info strong {
+    font-weight: bold;
+    font-size: 16px;
+    color: #222;
+}
+
+#parking-info button {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 10px;
+    background-color: #FFDF56;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#parking-info button:hover {
+    background-color: #FFDF56;
+}
+
+#parking-info span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+body {
+    background-color: #000000;
+}
+
+nav {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #1A1A1A;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul.menu-normal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.menu-normal li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul.menu-normal li a:hover {
+    color: white;
+    border-bottom: 1px solid #FFDF56; 
+    padding-bottom: 5px; /* Ajustando o espaçamento abaixo do texto */
+    margin-bottom: 5px; /* Ajustando o espaçamento abaixo da linha */
+}
+
+nav ul li {
+    color: #FFDF56;
+    list-style: none;
+    padding: 40px;
+    cursor: pointer;
+    font-family:  'Josefin Sans', sans-serif;
+}
+
+nav ul li a {
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+
+h1{
+    font-size: 20;
+    font-family: Lato;
+    margin: 0;
+    color: #f0f0f0;
+} 
+
+#estacionamentos-proximos {
+    padding: 20px;
+    background-color: #000000;
+}
+
+
+/* Estilização para o container da lista de estacionamentos */
+.lista-estacionamentos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilização para cada bloco de estacionamento */
+.lista-estacionamentos-item {
+    width: 280px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de elevação ao passar o mouse */
+.lista-estacionamentos-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagem do estacionamento */
+.lista-estacionamentos-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Título e descrições */
+.lista-estacionamentos-item h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.lista-estacionamentos-item p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+/* Estilização para o preço e vagas */
+.preco-hora, .vagas-disponiveis {
+    font-weight: bold;
+    color: #222;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Botão Selecionar */
+.selecionar-btn {
+    background-color: #FFDF56;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 15px;
+    width: 80%; /* Faz o botão ser mais largo */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Centraliza o botão */
+.selecionar-btn:hover {
+    background-color: #333;
+    color: #FFDF56;
+    transform: translateY(-2px);
+}
+
+
+.lista-estacionamentos-item .favorito {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: #FFDF56;
+    cursor: pointer;
+}
+
+.tag-reservado {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #FFDF56;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+ 
+/* Posiciona a label do preço abaixo do marcador */
+.price-label {
+    transform: translateY(20px); /* Ajuste a posição vertical */
+    background-color: white;     /* Fundo branco para destacar o texto */
+    padding: 2px 5px;            /* Espaçamento ao redor do texto */
+    border-radius: 5px;          /* Bordas arredondadas */
+    margin-top: 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+.ver-mais-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background-color: #FFDF56;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ver-mais-btn:hover {
+    background-color: #333;
+    color: #FFDF56;
+    transform: translateY(-2px);
+}
+
+
+.rating {
+    display: flex;
+    width: fit-content;
+  }
+  
+  .rating::before {
+    content: "\2605 \2605 \2605 \2605 \2606"; /* Empty star for unrated */
+    font-size: 16px;
+    color: #ccc;
+  }
+  
+  .rating.rated-4::before {
+    content: "\2605 \2605 \2605 \2605 \2605"; /* Filled stars for 4-star rating */
+    color: gold;
+  }
+  
+  /* Add similar styles for other ratings (1, 2, 3, 5 stars) */
+
+
+@media  (max-width:755px) {
+
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 64px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: #1A1A1A;
+        gap: -10px;
+        transition: 0.3s;
+        z-index: 10001;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin-top: 30px;
+        margin: 10px;
+        margin-bottom: -25px;
+    }
+}  
