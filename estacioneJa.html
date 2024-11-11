@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Estacione Já</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
+    <link rel="shortcut icon" href="image/icon.png" type="image/png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/estacione-ja.css">
+    <link rel="stylesheet" href="css/rodape.css">
+
+    <title>Mapa de Estacionamentos</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navigation">
+            <div style="z-index:2;position: absolute;top:80px;" class="search-container">
+                <input style="width: 100%;" id="location-input" type="text" placeholder="Pesquise o local ou endereço desejado">
+                <img id="location-input-icon" style="cursor:pointer;z-index:1; position: absolute;right:25px; top:32px; transform: translateY(-50%); width: 25px;" src="./Icon/Search.svg" alt="">
+            </div>
+
+            <a href="index.html">
+                <img src="image/logo_vagas.png" alt="Logo"/>
+            </a>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="estacioneJa.html">Estacione Já</a></li>
+                <li class="nav-item"><a href="trabalheconosco.html">Trabalhe Conosco</a></li>
+                <li class="nav-item"><a href="sobrenos.html">Sobre Nós</a></li>
+                <li><img src="image/usuario.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+                <a href="login.html">Cadastro | Login</a></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mapa -->
+    <div id="map"></div>
+
+    <!-- Informações do estacionamento selecionado -->
+    <div id="parking-info" style="position: fixed; bottom: 20px; left: 20px; background-color: white; padding: 10px; border: 1px solid #ccc; border-radius: 5px; display: none;"></div>
+
+    <section id="estacionamentos-proximos">
+        <div class="lista-estacionamentos">
+            <!-- A lista de estacionamentos será renderizada aqui -->
+        </div>
+        <!-- Botão Ver Mais -->
+        <div style="text-align: center; margin-top: 20px;">
+            <button id="ver-mais-btn" class="ver-mais-btn">Ver mais</button>
+        </div>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h1>Sobre</h1>
+                <ul>
+                    <li>Nossa História</li>
+                    <li>Minha Conta</li>
+                    <li>Parceiros</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h1>Dúvidas e Termos</h1>
+                <ul>
+                    <li>Políticas de Pagamentos</li>
+                    <li>Políticas de Privacidade</li>
+                    <li>Termo de uso</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h1>Central de Atendimento</h1>
+                <ul class="contact-info">
+                    <li>
+                        <img src="image/whatsapp.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+                        <span>+55 (11) 91234-56789</span>
+                    </li>
+                    <li>
+                        <img src="image/e-mail.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+                        <span>atendimento.contato@vagasja.com.br</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h1>Redes Sociais</h1>
+                <img src="image/instagram.png" alt="Ícone" style="width: 40px; height: 40px; margin-right: 10px;">
+                <img src="image/facebook.png" alt="Ícone" style="width: 40px; height: 40px; margin-right: 10px;">
+                <img src="image/tiktok.png" alt="Ícone" style="width: 40px; height: 40px; margin-right: 10px;">
+            </div>
+        </div>
+
+        <div class="footer-end">
+            <p>Todos direitos reservados para VagasJá 2024.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.process = {
+            env: {
+                API_KEY: 'AIzaSyAq89_1Oj4_zEVhPUtrWVq7kKoQjNJelkI' 
+            }
+        };
+    </script>
+    
+    <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
