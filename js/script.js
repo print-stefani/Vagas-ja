@@ -259,3 +259,4 @@ document.getElementById('ver-mais-btn').addEventListener('click', () => {
 document.getElementById('search-btn').addEventListener('click', () => {
     searchNearby(); // Chama a função de pesquisa
 });
+

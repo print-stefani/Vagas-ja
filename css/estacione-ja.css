@@ -372,22 +372,46 @@ h1{
   /* Add similar styles for other ratings (1, 2, 3, 5 stars) */
 
 
-@media  (max-width:755px) {
+  @media (max-width: 755px) {
+    .search-container {
+        width: 90%!important; /* Reduz a largura para ocupar 90% da tela */
+        margin: 0 auto; /* Centraliza o contêiner na tela */
+        padding: 0; /* Remove o padding extra */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-    .menu{
+    #location-input {
+        width: 100%; /* Ocupa toda a largura do contêiner reduzido */
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #location-input-icon {
+        width: 20px;
+        right: 10px;
+        top: 32px;
+    }
+
+    /* Ajuste da barra de navegação para telas menores */
+    .menu {
         display: block;
     }
-    .menu.ativo .bar:nth-child(1){
-        transform:  translateY(8px) rotate(45deg);
+
+    .menu.ativo .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
     }
+
     .menu.ativo .bar:nth-child(2) {
         opacity: 0;
     }
-    .menu.ativo .bar:nth-child(3){
+
+    .menu.ativo .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
-  
-    .nav-menu{
+
+    .nav-menu {
         position: fixed;
         right: -100%;
         top: 64px;
@@ -399,12 +423,14 @@ h1{
         transition: 0.3s;
         z-index: 10001;
     }
-    .nav-menu.ativo{
+
+    .nav-menu.ativo {
         right: 0;
     }
-    .nav-item{
+
+    .nav-item {
         margin-top: 30px;
         margin: 10px;
         margin-bottom: -25px;
     }
-}  
+}

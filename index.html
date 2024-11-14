@@ -36,41 +36,25 @@
         <img src="image/garagem.png" alt="Imagem de fundo" class="garagem-img">
     
         <section class="bloco">
-            <img src="image/garagem-mobile.png" alt="Imagem de fundo" class="garagem-mobile">
-    
-            <div class="bloco">
+            <div class="index-mobile">
+                <a href="estacioneJa.html"><button class="search-btn-mobile">Reservar Agora</button></a>
+                <img src="image/garagem-mobile.png" alt="Imagem de fundo" class="garagem-mobile">
+            </div>
+            <div class="content">
                 <div class="bloco-amarelo">
                     <div class="escrita">
                         <p class="text1">Estacionamento próximo ao seu destino,</p>
                         <p class="text2">agora ao alcance de um clique.</p>
                     </div>
-                </div>
-    
-                <div class="bloco-branco">
-                    <div class="container-bloco">
-                        <section class="opcao">
-                            <div class="button-menu">
-                                <button type="button" class="btn" onclick="selectButton(this)">Agora</button>
-                                <button type="button" class="btn" onclick="selectButton(this)">Reserva</button>
-                                <button type="button" class="btn" onclick="selectButton(this)">Mensal</button>
-                            </div>
-                        </section>
-                    </div>
                     <div class="search-box">
-                        <form action="estacioneJa.html" method="get" id="search-form">
-                            <div style="position: relative; width: 100%; ">
-                                <input  type="text" placeholder="Pesquise o local ou endereço desejado" name="search" id="search-input" required>
-                                
-                                <img id="location-input-icon" style="position: absolute; right:10px; top:40%; transform: translateY(-50%); width: 25px;" src="./Icon/Search.svg" alt="">
-                            </div>
-                            <button id="index-search-button" type="submit" class="search-btn">Buscar</button>
-                        </form>                        
+                        <a href="estacioneJa.html">
+                            <button class="search-btn">Reservar Agora</button>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-    </section>
-    
+        
     <section>
         <div class="content">
             <div class="quadrado">
@@ -166,7 +150,7 @@
 </footer>
 
 <!-- AJUSTAR PARA ESCONDER A CHAVE -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+
 <script>
     function initializeMap() {
         const mapOptions = {
