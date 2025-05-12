@@ -392,7 +392,11 @@ h6{
 }
 
 /* Estilo do botão */
-.search-btn {
+.search-btn-mobile {
+    display: none;
+}
+
+.search-btn-desktop {
     background-color: #000000;
     color: #FFDF56;
     padding: 18px 36px;
@@ -407,12 +411,12 @@ h6{
     margin-top: 20px;
 }
 
-.search-btn:hover {
+.search-btn-desktop:hover {
     background-color: #555;
     transform: scale(1.1); /* Efeito de aumento no botão */
 }
 
-.search-btn:focus {
+.search-btn-desktop:focus {
     outline: none; /* Remove o contorno de foco */
 }
 
@@ -570,7 +574,8 @@ h6{
         position: relative; /* Define o contêiner como referência para o botão */
         width: 100%;
     }
-    
+  
+
     .search-btn-mobile {
         background-color: #000000;
         color: #FFDF56;
