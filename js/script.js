@@ -1,9 +1,6 @@
-// Encontra a chave da API
-const key = window.process.env.API_KEY;
-
 async function loadGoogleMapsScript() {
     const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=places&callback=initMap`;
+    script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAq89_1Oj4_zEVhPUtrWVq7kKoQjNJelkI&libraries=places&callback=initMap';
     script.async = true;
     document.body.appendChild(script);
 }
@@ -97,11 +94,16 @@ window.initMap = function() {
 };
 
 function searchNearby() {
+    if (!map || !google.maps.places) {
+        console.error("Mapa ou biblioteca Places não disponível.");
+        return;
+    }
+
     var location = map.getCenter();
     var request = {
         location: location,
         radius: '300',
-        type: ['parking']
+        type: 'parking'
     };
 
     var service = new google.maps.places.PlacesService(map);
@@ -112,8 +114,10 @@ function searchNearby() {
             exibirEstacionamentos(estacionamentos); // Exibe a lista de estacionamentos
             for (var i = 0; i < estacionamentos.length; i++) {
                 createMarker(estacionamentos[i]); // Cria marcadores para os estacionamentos
-            }
-        }
+            }    
+        }else {
+            console.error("Erro ao buscar estacionamentos:", status);
+        } 
     });
 }
 
@@ -256,7 +260,7 @@ document.getElementById('ver-mais-btn').addEventListener('click', () => {
 });
 
 // Evento de pesquisa
-document.getElementById('search-btn').addEventListener('click', () => {
+document.getElementById('location-input-icon').addEventListener('click', () => {
     searchNearby(); // Chama a função de pesquisa
 });
 
