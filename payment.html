@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pagamento</title>
+  <link rel="shortcut icon" href="image/icon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/payment.css">
+  <link rel="stylesheet" href="css/sobre-nos.css">
+  <link rel="stylesheet" href="css/rodape.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navigation">
+      <a href="index.html">
+        <img src="image/logo_vagas.png" alt="Logo"/>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="estacioneJa.html">Estacione Já</a></li>
+        <li class="nav-item"><a href="trabalheconosco.html">Trabalhe Conosco</a></li>
+        <li class="nav-item"><a href="sobrenos.html">Sobre Nós</a></li>
+        <li>
+          <img src="image/usuario.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+          <a href="login.html">Cadastro | Login</a>
+        </li>
+      </ul>
+      <div class="menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+  
+  <div>
+    <img src="image/steps.png" alt="Ícone" class="step">
+  </div>
+
+  <div class="payment-container">
+    <div class="payment-methods-box">
+        <div class="payment-options">
+          <button id="btn-pix" class="selected">PIX</button>
+          <button id="btn-card">Cartão de Crédito</button>
+    </div>
+
+    <div>
+        <!-- Conteúdo PIX -->
+    <div id="pix-content" class="payment-content" style="display: block;">
+        <h3 class="payment-text">Pagar com PIX</h3>
+        <p>Escaneie o QR Code abaixo ou clique para copiar o código.</p>
+        <img src="image/qrcode.jpeg" alt="QR Code PIX" class="pix-qrcode" />
+        <span id="total-pagamento-valor">R$ 0,00</span>
+        <button class="copy-btn">Copiar QR Code</button>
+        <p class="obs">Aguardando confirmação do pagamento...</p>
+      </div>
+  
+      <!-- Conteúdo Cartão de Crédito -->
+      <div id="card-content" class="payment-content">
+        <h3 class="payment-text">Detalhes de Pagamento</h3>
+        <span id="total-pagamento-valor">R$ 0,00</span>
+        <div class="input-group">
+            <label>Número do Cartão</label>
+            <input type="text" placeholder="1111 2222 3333 1234" class="form-input">
+          </div>
+        
+          <div class="input-group">
+            <label>Nome no Cartão</label>
+            <input type="text" placeholder="Nome impresso" class="form-input">
+          </div>
+          <div class="card-details">
+            <div class="input-group-details">
+              <div class="date-group">
+                <label for="month">MM / AAAA</label>
+                <div class="date-fields">
+                  <input type="text" id="month" placeholder="MM" maxlength="2">
+                  <span>/</span>
+                  <input type="text" id="year" placeholder="AAAA" maxlength="4">
+                </div>
+              </div>
+          
+              <div class="cvv-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="CVV" maxlength="3">
+              </div>
+            </div>
+          </div>
+        <button class="confirm-btn" id="btn-confirmar">Confirmar Pagamento</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h1>Sobre</h1>
+        <ul>
+          <li>Nossa História</li>
+          <li>Minha Conta</li>
+          <li>Parceiros</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h1>Dúvidas e Termos</h1>
+        <ul>
+          <li>Políticas de Pagamentos</li>
+          <li>Políticas de Privacidade</li>
+          <li>Termo de uso</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h1>Central de Atendimento</h1>
+        <ul class="contact-info">
+          <li>
+            <img src="image/whatsapp.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+            <span>+55 (11) 91234-56789</span>
+          </li>
+          <li>
+            <img src="image/e-mail.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+            <span>atendimento.contato@vagasja.com.br</span>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h1>Redes Sociais</h1>
+        <img src="image/instagram.png" alt="Ícone" style="width: 40px; height: 40px; margin-right: 10px;">
+        <img src="image/facebook.png" alt="Ícone" style="width: 40px; height: 40px; margin-right: 10px;">
+        <img src="image/tiktok.png" alt="Ícone" style="width: 40px; height: 40px; margin-right: 10px;">
+      </div>
+    </div>
+    <div class="footer-end">
+      <p>Todos direitos reservados para VagasJá 2025.</p>
+    </div>
+  </footer>
+
+  <script src="js/payment.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

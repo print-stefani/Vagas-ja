@@ -150,7 +150,12 @@ async function centralizarMapaEndereco(endereco) {
 
 // Função para gerar um preço aleatório
 function gerarPrecoAleatorio() {
-    return (Math.random() * (20 - 5) + 5).toFixed(2); // Gera um preço entre R$ 5,00 e R$ 20,00
+    return Math.floor(Math.random() * (20 - 10 + 1)) + 10;    // Gera um preço entre R$ 10,00 e R$ 20,00
+}
+
+// Função para gerar vagas livres aleatório
+function gerarVagasAleatorio() {
+    return Math.floor(Math.random() * (25 - 5 + 1)) + 5;    // Gera um vagas entre  5 até 25
 }
 
 function createMarker(place) {
@@ -224,21 +229,42 @@ function exibirEstacionamentos(estacionamentos) {
         itemEstacionamento.classList.add('lista-estacionamentos-item');
 
         const fotoUrl = estacionamento.photos && estacionamento.photos.length > 0 
-            ? estacionamento.photos[0].getUrl({maxWidth: 400, maxHeight: 300}) 
+            ? estacionamento.photos[0].getUrl({ maxWidth: 800, maxHeight: 600 }) 
             : 'image/placeholder.png';
 
         const preco = gerarPrecoAleatorio(); // Gera um preço aleatório para cada estacionamento
-
+        const vagasDisponiveis = gerarVagasAleatorio();
         itemEstacionamento.innerHTML = `
-            <img src="${fotoUrl}" alt="Imagem do estacionamento">
-            <h3>${estacionamento.name}</h3>
-            <p><strong>Endereço:</strong> ${estacionamento.vicinity}</p>
-            <p><strong>Vagas Disponíveis:</strong> 50</p> <!-- Valor fictício para demonstração -->
-            <p class="preco-hora"><strong>Preço:</strong> R$ ${preco}/hora</p> <!-- Usa o preço gerado -->
-            <button class="selecionar-btn">Selecionar</button>
+            <div class="card-estacionamento-flutuante">
+                <img src="${fotoUrl}" alt="Imagem do estacionamento">
+                <h3>${estacionamento.name}</h3>
+                <p><strong>Endereço:</strong> ${estacionamento.vicinity}</p>
+                <p><strong>Vagas Disponíveis:</strong> ${vagasDisponiveis}</p>
+                <p class="preco-hora"><strong>Preço:</strong> R$ ${preco}/hora</p>
+                <button class="selecionar-btn">Selecionar</button>
+            </div>
         `;
 
         listaEstacionamentos.appendChild(itemEstacionamento);
+
+        // Selecionando o botão "Selecionar" que foi adicionado ao HTML
+        const selecionarBtn = itemEstacionamento.querySelector('.selecionar-btn');
+        
+        // Adicionando o event listener ao botão para redirecionar para checkout.html
+        selecionarBtn.addEventListener('click', function() {
+            // Armazena os dados do estacionamento no localStorage
+            const dadosEstacionamento = {
+                nome: estacionamento.name,
+                endereco: estacionamento.vicinity,
+                preco: preco,
+                foto: fotoUrl
+            };
+            localStorage.setItem('estacionamentoSelecionado', JSON.stringify(dadosEstacionamento));
+            // Redireciona para a página checkout.html
+            window.location.href = 'checkout.html';
+        });        
+
+
     });
 
     const verMaisBtn = document.getElementById('ver-mais-btn');
