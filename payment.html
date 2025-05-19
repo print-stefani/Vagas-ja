@@ -35,64 +35,71 @@
     </nav>
   </header>
   
-  <div>
-    <img src="image/steps.png" alt="Ícone" class="step">
-  </div>
 
+  <div class="step">
+    <img src="image/steps.png" alt="Ícone">
+  </div>
+  
   <div class="payment-container">
     <div class="payment-methods-box">
-        <div class="payment-options">
-          <button id="btn-pix" class="selected">PIX</button>
-          <button id="btn-card">Cartão de Crédito</button>
-    </div>
-
-    <div>
-        <!-- Conteúdo PIX -->
-    <div id="pix-content" class="payment-content" style="display: block;">
-        <h3 class="payment-text">Pagar com PIX</h3>
-        <p>Escaneie o QR Code abaixo ou clique para copiar o código.</p>
-        <img src="image/qrcode.jpeg" alt="QR Code PIX" class="pix-qrcode" />
-        <span id="total-pagamento-valor">R$ 0,00</span>
-        <button class="copy-btn">Copiar QR Code</button>
-        <p class="obs">Aguardando confirmação do pagamento...</p>
+      <div class="payment-options">
+        <button id="btn-pix" class="selected">PIX</button>
+        <button id="btn-card">Cartão de Crédito</button>
       </div>
   
-      <!-- Conteúdo Cartão de Crédito -->
-      <div id="card-content" class="payment-content">
-        <h3 class="payment-text">Detalhes de Pagamento</h3>
-        <span id="total-pagamento-valor">R$ 0,00</span>
-        <div class="input-group">
-            <label>Número do Cartão</label>
-            <input type="text" placeholder="1111 2222 3333 1234" class="form-input">
-          </div>
-        
+      <div>
+        <!-- Conteúdo PIX -->
+        <div id="pix-content" class="payment-content" style="display: block;">
+          <h3 class="payment-text">Pagar com PIX</h3>
+          <span id="total-pagamento-pix" class="total-pix">R$ 0,00</span>
+          <p class="text">Escaneie o QR Code abaixo ou clique para copiar o código.</p>
+          <img src="image/qrcode.jpeg" alt="QR Code PIX" class="pix-qrcode" />
+          <button class="copy-btn" id="btn-confirmar">Copiar QR Code</button>
+          <p class="obs">Aguardando confirmação do pagamento...</p>
+        </div>
+  
+        <!-- Conteúdo Cartão de Crédito -->
+        <div id="card-content" class="payment-content" style="display: none;">
+          <h3 class="payment-text">Detalhes de Pagamento</h3>
+          <span id="total-pagamento-cartao" class="total-cartao">R$ 0,00</span>
+  
           <div class="input-group">
-            <label>Nome no Cartão</label>
-            <input type="text" placeholder="Nome impresso" class="form-input">
+            <label for="card-number">Número do Cartão</label>
+            <input type="text" id="card-number" placeholder="1111 2222 3333 1234" class="form-input">
           </div>
+  
+          <div class="input-group">
+            <label for="card-name">Nome no Cartão</label>
+            <input type="text" id="card-name" placeholder="Nome impresso" class="form-input">
+          </div>
+  
           <div class="card-details">
             <div class="input-group-details">
+  
               <div class="date-group">
                 <label for="month">MM / AAAA</label>
                 <div class="date-fields">
-                  <input type="text" id="month" placeholder="MM" maxlength="2">
+                  <input type="text" id="month" placeholder="MM" maxlength="2" class="form-input">
                   <span>/</span>
-                  <input type="text" id="year" placeholder="AAAA" maxlength="4">
+                  <input type="text" id="year" placeholder="AAAA" maxlength="4" class="form-input">
                 </div>
               </div>
-          
+  
               <div class="cvv-group">
                 <label for="cvv">CVV</label>
-                <input type="text" id="cvv" placeholder="CVV" maxlength="3">
+                <input type="text" id="cvv" placeholder="CVV" maxlength="3" class="form-input">
               </div>
+  
             </div>
           </div>
-        <button class="confirm-btn" id="btn-confirmar">Confirmar Pagamento</button>
+  
+          <button class="confirm-btn" >Confirmar Pagamento</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
+  
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column">
@@ -136,6 +143,7 @@
     </div>
   </footer>
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script src="js/payment.js"></script>
   <script src="js/menu.js"></script>
 </body>

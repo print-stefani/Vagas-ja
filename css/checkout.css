@@ -165,12 +165,14 @@ p {
  
   }
 
-  .step{
+  .step {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+    margin-top: 1%;
     margin-bottom: 15px;
-}
+    height: 100%; /* ou altura que quiser para o contêiner */
+  }
 
 /* No mobile, movemos visualmente o botão pra depois da reserva */
 @media (max-width: 768px) {

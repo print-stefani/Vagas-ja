@@ -56,6 +56,16 @@ duracaoInput.addEventListener('input', () => {
   }
 });
 
+// Quando o campo de email perder o foco (ou no evento 'input')
+document.getElementById('email').addEventListener('change', function() {
+  const email = this.value;
+  localStorage.setItem('userEmail', email);
+});
+
+document.getElementById('nome').addEventListener('change', function () {
+  const nome = this.value;
+  localStorage.setItem('userName', nome);
+});
 
 // AJUSTE CALENDARIO E HORA RESERVA
 
@@ -86,7 +96,11 @@ window.addEventListener('DOMContentLoaded', () => {
   
           const dataFormatada = `${dia} ${mes} ${ano}, ${hora}:${min}`;
           console.log("Data formatada:", dataFormatada);
-          // Você pode mostrar essa string onde quiser no seu HTML.
+
+           // salva a data no localStorage
+          localStorage.setItem('dataReserva', dataFormatada);
+          console.log("Data salva no localStorage:", valor);
+          
         }
       });
     }

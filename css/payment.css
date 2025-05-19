@@ -6,6 +6,10 @@
     min-height: 80vh; /* ajustável conforme seu layout */
     padding: 20px;
   }
+
+  .text{
+    margin-top: 10px;
+  }
   
   .payment-methods-box {
     width: 30%;
@@ -104,6 +108,7 @@
   
   .input-group label {
     font-size: 14px;
+    margin-top: 10px;
     margin-bottom: 5px;
     color: #333;
   }
@@ -122,6 +127,12 @@
     outline: none;
   }
   
+  .form-input.error, 
+input.error {
+  border: 2px solid #e74c3c; /* vermelho */
+  background-color: #fceae9;
+}
+
   .card-details {
     display: flex;
     gap: 10px;
@@ -146,6 +157,7 @@
     align-items: center;
     gap: 6px;
   }
+
   
   .date-fields input {
     width: 60px;
@@ -168,14 +180,21 @@
   
 
 .payment-text{
-    margin-bottom: 12% !important;
+    margin-bottom: 5% !important;
 }
 
-.step{
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
+.pix-conten.total-pagamento-valor {
+  margin-top: 100%;
+}
+
+
+.step {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center;     /* centraliza verticalmente */
+  margin-top: 1%;
+  margin-bottom: 15px;
+  height: 100%; /* ou altura que quiser para o contêiner */
 }
   
 .confirm-btn,
@@ -262,6 +281,14 @@
     color: #FFDF56;
 }
 
+.total-pix {
+  font-weight: bold;
+}
+
+.total-cartao {
+  font-weight: bold;
+}
+
 @media (max-width: 450px) {
     .payment-section, 
     .payment-methods-box, 
@@ -277,13 +304,5 @@
     
     .card-details {
         flex-direction: column;
-    }
-
-    .step{
-      margin: 10px;
-      margin-left: 7%;
-      width: 90%;
-      height: 100%;
-
     }
 }
