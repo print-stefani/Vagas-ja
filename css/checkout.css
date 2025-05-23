@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,315;1,315&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
+
+body {
+  background-color: #000000;
+}
+
+nav {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  background-color: #1A1A1A;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul.nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul.nav-menu li {
+  display: inline;
+  margin-right: 40px;
+}
+
+nav ul.nav-menu li a:hover {
+  color: white;
+  border-bottom: 1px solid #FFDF56; 
+  padding-bottom: 5px; /* Ajustando o espaçamento abaixo do texto */
+  margin-bottom: 5px; /* Ajustando o espaçamento abaixo da linha */
+}
+
+nav ul li {
+  color: #FFDF56;
+  list-style: none;
+  padding: 40px;
+  cursor: pointer;
+  font-family:  'Josefin Sans', sans-serif;
+}
+
+nav ul li a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+img {
+  height: 70px;
+}
+
+.menu{
+  cursor: pointer;
+  display: none;
+}
+
+.menu .bar{
+  display: block;
+  width: 30px;
+  height: 3px;
+  border-radius: 3px;
+  background: #FFDF56;
+  margin: 4px auto;
+  transition: all 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+  background: #FFDF56;
+}
+
+.titulo {
+    text-align: left;
+    font-size: 30px;
+    color: white;
+    margin-left: 50px;
+    margin-top: 3%;
+    font-family: "Lexend Exa", sans-serif;
+    font-weight:bold;
+}
+
+
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    margin-top: 3%;
+    font-family: "Lexend Exa", sans-serif;
+    font-weight:bold;
+}
+
+h3 {
+  margin-bottom: 1%;
+  font-size: 30px;
+  color: #000000;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight:bold;
+}
+
+
+h6 {
+  margin-top: 1%;
+  margin-bottom: 4%;
+  font-size: 16px;
+  color: #000000;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+p {
+  margin-top: 2%;
+  margin-bottom: 1%;
+  font-size: 14px;
+  color: #000000;
+  font-family: 'Josefin Sans', sans-serif;
+}
+  .dados {
+    height: 25px !important; /* Ajusta a altura conforme necessário */
+    width: 25px !important; /* Ajusta a largura conforme necessário */
+    margin-left: 3px !important; /* Ajuste as margens conforme necessário */
+  }
+
+  .checkout-container {
+    margin: 10px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  .form-label {
+    font-weight: bold;
+  }
+
+  .card {
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    max-height: 270px; 
+  }
+  
+  .btn-primary {
+    background-color: #FFDF56;
+    color: #000000;
+    width: 100%;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+ 
+  }
+
+  .step {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente */
+    margin-top: 1%;
+    margin-bottom: 15px;
+    height: 100%; /* ou altura que quiser para o contêiner */
+  }
+
+/* No mobile, movemos visualmente o botão pra depois da reserva */
+@media (max-width: 768px) {
+  .checkout-container {
+    padding: 15px;
+  }
+
+  p {
+    margin: 4%;
+    font-size: 10px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .step{
+    margin: 10px;
+    margin-left: 7%;
+    width: 90%;
+    height: 100%;
+
+  }
+}
