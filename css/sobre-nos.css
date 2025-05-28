@@ -95,6 +95,31 @@ h2 {
     font-weight:bold;
 }
 
+.missao-visao-valores {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.bloco {
+    background-color: #1a1a1a;
+    border-left: 5px solid #FFDF56;
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+.bloco h2 {
+    color: #FFDF56;
+    margin-bottom: 10px;
+}
+
+.bloco ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+
 .content-wrapper {
     display: flex;
     align-items: center;
@@ -147,6 +172,142 @@ h2 {
 
 }
 
+.mvv-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px 20px;
+  background-color: #111111;
+  font-family: 'Lato', sans-serif;
+}
+
+.mvv-card {
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 300px;
+  flex: 1 1 280px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.mvv-card:hover {
+  transform: translateY(-5px);
+}
+
+.mvv-card h2 {
+  font-size: 22px;
+  color: #FFDF56;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.mvv-card p,
+.mvv-card ul {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+.mvv-card ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.mvv-icon {
+  font-size: 36px;
+  color: #FFDF56;
+}
+
+.container-sobre {
+  padding: 40px 20px;
+  color: white;
+}
+
+.conteudo-sobre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.p {
+    color: #e0e0e0;
+}
+
+.imagem-rapaziada img {
+    height: 300px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.texto-sobre {
+  flex: 1;
+  font-family: 'Lexend Exa', sans-serif;
+}
+
+.texto-sobre h2 {
+  color: #FFDF56;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.texto-sobre p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsivo: empilha em telas menores */
+@media (max-width: 768px) {
+  .conteudo-sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .imagem-rapaziada img {
+    width: 100%;
+  }
+
+  .texto-sobre h2 {
+    font-size: 24px;
+  }
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    margin-top: 3%;
+    font-family: "Lexend Exa", sans-serif;
+    font-weight:bold;
+}
+
+.bloco h2 {
+    color: #FFDF56;
+    margin-bottom: 10px;
+}
+
+.bloco ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+
+.convite {
+    color: #e0e0e0;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+
 .estrada img {
     margin-top: 40px;
     width: 100%;
@@ -181,7 +342,7 @@ h2 {
 /* EQUIPE */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    grid-template-columns: repeat(2, 1fr); /* colunas iguais */
     gap: 20px; /* Espaçamento entre as imagens */
 }
 
@@ -205,6 +366,15 @@ h2 {
 
 /* RESPONSIVO */
 @media  (max-width:755px) {
+    .missao-visao-valores {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .bloco {
+        flex: 1;
+        margin: 0 10px;
+    }
 
     .menu{
         display: block;
@@ -246,6 +416,17 @@ h2 {
         margin-top: 5% !important;
 
     }
+
+    .missao-visao-valores {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .bloco {
+        flex: 1;
+        margin: 0 10px;
+    }
+
 
     .estrada img {
         display: none;
