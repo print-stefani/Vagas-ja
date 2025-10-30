@@ -1,4 +1,5 @@
 [
+  // Estilos gerais de texto e geometria (mantendo o modo claro)
   {
     "featureType": "all",
     "elementType": "labels.text.fill",
@@ -30,29 +31,11 @@
     ]
   },
   {
-    "featureType": "administrative",
-    "elementType": "geometry.stroke",
-    "stylers": [
-      {
-        "color": "#d1d1d1"
-      }
-    ]
-  },
-  {
     "featureType": "landscape",
     "elementType": "geometry.fill",
     "stylers": [
       {
         "color": "#f0f0f0"
-      }
-    ]
-  },
-  {
-    "featureType": "poi",
-    "elementType": "geometry.fill",
-    "stylers": [
-      {
-        "color": "#e0e0e0"
       }
     ]
   },
@@ -75,20 +58,22 @@
     ]
   },
   {
-    "featureType": "transit",
-    "elementType": "geometry.fill",
-    "stylers": [
-      {
-        "color": "#f2f2f2"
-      }
-    ]
-  },
-  {
     "featureType": "water",
     "elementType": "geometry.fill",
     "stylers": [
       {
         "color": "#c8d7e4"
+      }
+    ]
+  },
+
+  // 🛑 REGRAS PARA REMOVER PONTOS DE INTERESSE (POIs) 🛑
+  {
+    "featureType": "poi",
+    "elementType": "all",
+    "stylers": [
+      {
+        "visibility": "off"
       }
     ]
   }
