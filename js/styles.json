@@ -1,5 +1,4 @@
 [
-  // Estilos gerais de texto e geometria (mantendo o modo claro)
   {
     "featureType": "all",
     "elementType": "labels.text.fill",
@@ -67,7 +66,6 @@
     ]
   },
 
-  // 🛑 REGRAS PARA REMOVER PONTOS DE INTERESSE (POIs) 🛑
   {
     "featureType": "poi",
     "elementType": "all",
